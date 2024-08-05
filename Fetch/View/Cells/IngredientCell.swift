@@ -24,7 +24,7 @@ class IngredientCell: UITableViewCell {
         didSet {
             guard let ingredient = ingredient else { return }
             
-            measurmentLabel.text = ingredient.measurement
+            measurmentLabel.text = ingredient.measurement.formatted
             setText(ingredient.name)
         }
     }

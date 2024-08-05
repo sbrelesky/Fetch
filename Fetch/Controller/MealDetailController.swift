@@ -307,6 +307,7 @@ extension MealDetailController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.generic, for: indexPath)
         cell.selectionStyle = .none
+        cell.backgroundColor = .white
         
         var config = cell.defaultContentConfiguration()
         config.textProperties.font = Theme.Fonts.main(size: 16.0, weight: .medium)

@@ -15,8 +15,9 @@ struct Meal: Codable {
     
     let id: String
     private let _name: String
+    let imageUrl: String
+    
     var name: String {
         return _name.capitalized
     }
-    let imageUrl: String
 }

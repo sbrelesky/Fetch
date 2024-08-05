@@ -13,17 +13,16 @@ struct MealDetails: Codable {
     let origin: String
     let drink: String?
     private let _instructions: String
+    let tags: String?
+    let youtubeUrl: String
+    let sourceUrl: String?
+    let ingredients: [Ingredient]
+    
     var instructions: String {
         return _instructions
             .replacingOccurrences(of: "\r", with: "\n")
             .replacingOccurrences(of: "\n\n\n\n", with: "\n\n")
     }
-    
-    let tags: String?
-    let youtubeUrl: String
-    let sourceUrl: String?
-    
-    let ingredients: [Ingredient]
     
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: MealDetailCodingKeys.self)
@@ -46,6 +45,8 @@ struct MealDetails: Codable {
         let ingredientContainer = try decoder.container(keyedBy: IngredientKeys.self)
         let measurementContainer = try decoder.container(keyedBy: MeasurementKeys.self)
  
+        /// Would probably want to make this dynamic in a real-world application
+        /// Get a maxIngredients count returned as part of the json or count the number of occurences of the substring 'strIngredient'
         for i in 1...20 {
             
             guard let ingredientNameKey = IngredientKeys(stringValue: "strIngredient\(i)"),
@@ -56,8 +57,12 @@ struct MealDetails: Codable {
                 continue
             }
             
-            if !ingredients.contains(where: { $0.name == ingredientName && $0._measurement == measurement }) {
-                ingredients.append(Ingredient(name: ingredientName, _measurement: measurement))
+            if !ingredients.contains(where: { $0.name == ingredientName }) {
+                let ingredient = Ingredient(
+                    name: ingredientName.capitalized,
+                    measurement: Measurement(measurementString: measurement)
+                )
+                ingredients.append(ingredient)
             }
         }
         

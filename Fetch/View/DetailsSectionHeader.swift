@@ -37,5 +37,4 @@ class MealDetailSectionHeader: UIView {
             label.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
 }

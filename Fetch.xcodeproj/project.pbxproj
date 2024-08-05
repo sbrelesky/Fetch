@@ -32,6 +32,8 @@
 		347C061E2C5D6E340002D3C4 /* DetailsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C061D2C5D6E340002D3C4 /* DetailsSectionHeader.swift */; };
 		347C06352C5EE5B90002D3C4 /* Repsonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C06342C5EE5B90002D3C4 /* Repsonse.swift */; };
 		347C06372C5EE5F20002D3C4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C06362C5EE5F20002D3C4 /* NetworkError.swift */; };
+		34934A0B2C61223B00E69F39 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34934A0A2C61223B00E69F39 /* Measurement.swift */; };
+		34934A0D2C61225400E69F39 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34934A0C2C61225400E69F39 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		347C061D2C5D6E340002D3C4 /* DetailsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSectionHeader.swift; sourceTree = "<group>"; };
 		347C06342C5EE5B90002D3C4 /* Repsonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repsonse.swift; sourceTree = "<group>"; };
 		347C06362C5EE5F20002D3C4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		34934A0A2C61223B00E69F39 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		34934A0C2C61225400E69F39 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				347C05BA2C59CD4D0002D3C4 /* Ingredient.swift */,
 				347C06342C5EE5B90002D3C4 /* Repsonse.swift */,
 				347C06362C5EE5F20002D3C4 /* NetworkError.swift */,
+				34934A0A2C61223B00E69F39 /* Measurement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,9 +173,9 @@
 		347C05BC2C59DF830002D3C4 /* Coding Keys */ = {
 			isa = PBXGroup;
 			children = (
+				347C05C12C59DFD60002D3C4 /* MealDetailCodingKeys.swift */,
 				347C05BD2C59DF8F0002D3C4 /* IngredientKeys.swift */,
 				347C05BF2C59DFAF0002D3C4 /* MeasurementKeys.swift */,
-				347C05C12C59DFD60002D3C4 /* MealDetailCodingKeys.swift */,
 			);
 			path = "Coding Keys";
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				347C06032C5ACEA20002D3C4 /* ImageView.swift */,
 				347C06102C5C0BAC0002D3C4 /* TableView.swift */,
 				347C06182C5D4C270002D3C4 /* UIViewController.swift */,
+				34934A0C2C61225400E69F39 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 				347C05C02C59DFAF0002D3C4 /* MeasurementKeys.swift in Sources */,
 				347C06372C5EE5F20002D3C4 /* NetworkError.swift in Sources */,
 				347C05B12C59A8550002D3C4 /* NetworkManager.swift in Sources */,
+				34934A0B2C61223B00E69F39 /* Measurement.swift in Sources */,
 				347C05852C59A76C0002D3C4 /* MealListController.swift in Sources */,
 				347C06072C5ACF250002D3C4 /* MealCell.swift in Sources */,
 				347C061E2C5D6E340002D3C4 /* DetailsSectionHeader.swift in Sources */,
@@ -369,6 +376,7 @@
 				347C061C2C5D4CC80002D3C4 /* ImageCache.swift in Sources */,
 				347C06132C5C1AE10002D3C4 /* Theme.swift in Sources */,
 				347C06112C5C0BAC0002D3C4 /* TableView.swift in Sources */,
+				34934A0D2C61225400E69F39 /* String.swift in Sources */,
 				347C06192C5D4C270002D3C4 /* UIViewController.swift in Sources */,
 				347C06152C5C23190002D3C4 /* Constants.swift in Sources */,
 				347C05BE2C59DF8F0002D3C4 /* IngredientKeys.swift in Sources */,
@@ -553,7 +561,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -563,6 +571,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shanebrelesky.Fetch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -583,7 +594,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -593,6 +604,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shanebrelesky.Fetch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

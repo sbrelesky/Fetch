@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 protocol NetworkManagerProtocol {
     func fetchMeals() async throws -> [Meal]
     func fetchMealDetails(for id: String) async throws -> [MealDetails]
@@ -57,17 +56,13 @@ class NetworkManager: NetworkManagerProtocol {
                 let decodedResponse = try JSONDecoder().decode(T.self, from: data)
                 return decodedResponse
             } catch {
+                print(error)
                 throw NetworkError.decodingFailed
             }
             
         } catch {
             throw NetworkError.requestFailed
         }
-    }
-
-    func downloadImage(from url: URL) async throws -> UIImage? {
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return UIImage(data: data)
     }
 }
 
